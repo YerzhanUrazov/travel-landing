@@ -1,0 +1,716 @@
+/* lato-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  
+  }
+  *, *::before,*::after {
+    box-sizing: inherit;
+  }
+  body {
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #102746;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+  .wrapper-full {
+    max-width: 1262px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .section-title {
+    
+    font-size: 35px;
+    line-height: 42px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .section-title::after {
+    display: block;
+    content: '';
+    width: 253px;
+    height: 3px;
+    background-color: #006DFE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* Header styles*/
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .2s linear;
+    padding-bottom: 20px;
+    z-index: 5;
+  }
+  .header-active {
+    background-color: #0E1D28;
+  }
+  
+  .header-wrapper {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 56px;
+    
+  }
+  .header-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header-list-item {
+    margin-right: 82px;
+  }
+  .header-list-item:last-child {
+    margin-right: 0;
+  }
+  .header-link {
+    
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+  }
+  .header-link:focus, .header-link:active, .header-link:hover {
+    opacity: 0.8;
+  }
+  .header-burger {
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+  }
+  .burger-line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    left:0;
+  }
+  .burger-line-first {
+    top:0;
+  }
+  .burger-line-second {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .burger-line-third {
+    bottom: 0;
+  }
+
+  /*Intro styles*/
+  .intro {
+    min-height: 100vh;
+    background: url(../img/Hero.jpg) no-repeat center/cover;
+    padding-top: 263px;
+    padding-bottom: 230px;
+  } 
+  .intro-title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    max-width: 619px;
+    margin-bottom: 22px;
+  }
+  .intro-subtitle {
+    color: white;
+    max-width: 546px;
+    margin-bottom: 59px;
+  }
+  .search-form-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .search-form-field {
+    width: 297px;
+    background: transparent url(../img/Oval.svg) no-repeat left 7px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+  }
+  .search-form-field::placeholder {
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+  }
+  .search-form-submit {
+    padding: 15px 39px;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: white;
+    background-color: #1B7DFF;
+    border: 0;
+  }
+  .search-form-submit:hover, .search-form-submit:active, 
+  .search-form-submit:focus {
+    background-color: #064495;
+  }
+
+  /* benefits style */
+
+  .benefits {
+    margin-bottom: 131px;
+  }
+  .benefits-wrapper {
+    max-width: 1262px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px rgba(21,24,36,0.15993);
+    position: relative;
+  }
+  .benefit-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 55px;
+    padding: 0 100px;
+  }
+  .benefits-title {
+    width: 100%;  
+    font-size: 35px;
+    line-height: 42px;
+    padding: 93px 100px 95px 100px;
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translateY(-100%);
+    background-color: white;
+  }
+  .benefit-card {
+    grid-column: span 1;
+    margin-bottom: 112px;
+  }
+  .benefit-card-pic {
+    margin-bottom: 37px;
+    max-width: 66px;
+  }
+  .benefit-card-thumb {
+    display: block;
+
+  }
+  .benefits-card-title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 26px;
+  }
+  .benefits-card-desc {
+    max-width: 317px;
+    margin-bottom: 39px;
+  }
+  .benefits-card-more {
+    display: inline-block;
+    color: #006DFE;
+    padding-right: 59px;
+    background: url(../img/Shape.svg) no-repeat;
+    background-position: 95%;
+    transition: 0.2s background-position;
+  }
+  .benefits-card-more:hover, .benefits-card-more:focus {
+    background-position: right;
+  }
+  
+  /* -----Places------ */
+  #locations,#articles,#videos {
+    scroll-margin-top: 108px;
+  }
+  .places {
+    margin-bottom: 131px;
+  }
+  .places-title {
+    margin-right: 15px;
+  }
+  .places-caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+  .places-viewall {
+    color: #006DFE;
+    text-decoration: none;
+    background: url(../img/Shape.svg) no-repeat right;
+    padding-right: 59px;
+  }
+  .places-viewall:focus, .places-viewall:hover {
+    opacity: 0.7;
+  }
+  .places-cards {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:10px
+  }
+  .places-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .places-card:hover .places-card-pic {
+    transform: scale(1.05);
+  }
+  .places-card::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(21,24,36,0.40);
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .places-card-size-large {
+    grid-column: span 3;
+  }
+  .places-card-pic {
+    width: 100%;
+    transition: 0.5s;
+  }
+  .places-card-cap {
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 3;
+  }
+  .places-card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+  }
+  .places-card-size-small {
+    grid-column: span 2;
+  }
+  .places-card-pic-large {
+    height: 354px;
+    object-fit: cover;
+  }
+  .places-card-pic-small {
+    height: 283px;
+    object-fit: cover;
+  }
+
+  /* Tours */
+  .tours {
+    margin-bottom: 139px;
+  }
+  .tours-tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:0 108px;
+    align-items: center;
+    margin-bottom: 77px;
+  }
+  .tour-title {
+    font-size: 30px;
+    line-height: 40px;
+    color: #102746;
+    margin-bottom: 85px;
+  }
+  .tour-desc {
+    color: #102746;
+    margin-bottom: 58px;
+  }
+  .tour-view {
+    display: inline-block;
+    color: #006DFE;
+    padding-right: 59px;
+    background: url(../img/Shape.svg) no-repeat;
+    background-position: right;
+    text-decoration: none;
+  }
+  .tour-info2 {
+    padding-left: 47px;
+  }
+  .tour-info1 {
+    padding-right: 47px;
+  }
+
+  /* Top places */
+
+  .top {
+    margin-bottom: 86px;
+  }
+  .top-title {
+    margin-bottom: 54px;
+  }
+  .top-cards {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 57px;
+  }
+  .top-card {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+    
+  }
+  .top-card-pic {
+    position: relative;
+    margin-bottom: 45px;
+  }
+  
+  .top-card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgba(21,24,36,0.6);
+  }
+  .top-card-title {
+    
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    padding: 16px 25px;
+    margin: 0 auto 0 0;
+  }
+  .top-card-likes {
+    color: white;
+    padding-right: 20px;
+    background: url(../img/heart.svg) no-repeat right;
+    margin-right: 14px;
+  }
+  .top-card-comments {
+    color: white;
+    padding-right: 23px;
+    background: url(../img/comment.svg) no-repeat right;
+    margin-right: 25px;
+  }
+  
+  .top-card-desc { 
+    color: #102746;
+    margin-bottom: 31px;
+    
+  }
+  .top-card-more {
+    padding: 12px 19px;
+    text-transform: uppercase;
+    
+    font-size: 16px;
+    color: white;
+    background-color: #1B7DFF;
+    border: 0;
+    text-decoration: none;
+    margin: auto 0 0 0;
+    width:118px
+
+  }
+  .top-card-more:hover, .top-card-more:active, 
+  .top-card-more:focus {
+    background-color: #064495;
+  }
+
+  /* Videos */
+
+  .videos {
+    width: 100%;
+  }
+  .videos-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .video-item {
+    padding-top: 56.25%;
+  }
+  .video-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+    /* Footer */
+    .footer {
+      background: #0E1D28;
+      padding: 119px 0;
+    }
+    .footer-item {
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+    .footer-logo {
+      flex-grow: 1;
+    }
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .footer-menu-title {
+      
+      font-size: 18px;
+      line-height: 24px;
+      color: white;
+    }
+    .footer-menu-link {
+      font-size: 16px;
+      line-height: 24px;
+      color: white;
+      text-decoration: none;
+    }
+    .footer-menu-link:hover, .footer-menu-link:focus, .footer-menu-link:active {
+      opacity: 0.6;
+    }
+
+    /* Media */
+
+  @media screen and (max-width: 960px) {
+    .search-form-field {
+      margin-bottom: 25px;
+    }
+    .benefits {
+      margin-bottom: 90px;
+    }
+    .benefit-card {
+      margin-bottom: 30px;
+    }
+    .benefit-cards {
+      padding: 0 15px;
+      column-gap: 35px;
+    }
+    .benefits-title {
+      padding: 45px 15px;
+    }
+    .benefits-wrapper {
+      box-shadow: none;
+    }
+    .places {
+      margin-bottom: 90px;
+    }
+    .places-card-size-large {
+      grid-column: span 6;
+    }
+    .places-card-size-small {
+      grid-column: span 6;
+    }
+    .tours {
+      margin-bottom: 90px;
+    }
+    .tours-tour {
+      gap: 0 35px;
+      margin-bottom: 45px;
+    }
+    .tour-title, .tour-desc {
+      margin-bottom: 15px;
+    }
+    .tour-info1, .tour-info2 {
+      padding: 0;
+    }
+    .tour-pic-mobile-first {
+      grid-row-start: -1;
+    }
+    .top-cards{
+      column-gap: 25px;
+      row-gap: 35px;
+    }
+    .top-card {
+      grid-column: span 3;
+    }
+    .top-card-pic, .top-card-desc {
+      margin-bottom: 25px;
+    }
+    .top-title {
+      margin-bottom: 35px;
+    }
+    .footer {
+      padding: 60px 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .section-title {
+      margin-bottom: 25px;
+    }
+    .section-title::after {
+      width: 70px;
+    }
+    .places {
+      margin-bottom: 60px;
+     }
+    .places-card-size-large, .places-card-size-small {
+      height: 230px;
+    }
+    .header-burger {
+      display: block;
+    }
+    .header-wrapper {
+      padding-top: 35px;
+    }
+    
+    .header-nav {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #0E1D28;
+      z-index: 10;
+      padding: 80px;
+      transform: translateX(100%);
+      transition: 0.3s linear;
+    }
+    .header-nav-active {
+      transform: translate(0);
+    }
+    .header-list-item {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    .header-list-item:last-child {
+      margin-bottom: 0;
+    }
+    .header-link {
+      font-size: 42px;
+      line-height: 46px;
+    }
+    .header-nav-close {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 11;
+    }
+    .header-nav-close-line {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      top: 50%;
+      
+    }
+      .header-nav-close-line:first-child {
+      transform: rotate(45deg) translateY(-50%);
+    }
+    .header-nav-close-line:last-child {
+      transform: rotate(-45deg) translateY(-50%);
+    } 
+    .search-form-field {
+      margin-right: 0;
+      width: 100%;
+      padding-bottom: 12px;
+    }
+    .search-form-field::placeholder {
+      font-size: 16px;
+    }
+    .intro {
+      padding-top: 150px;
+    }
+    .intro-title {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    .benefits {
+      margin-bottom: 60px;
+    }
+    .benefit-card {
+      grid-column: span 3;
+    }
+    .benefit-card-pic {
+      margin-bottom: 20px;
+    }
+    .benefits-card-title {
+      margin-bottom: 15px;
+    }
+    .benefits-card-desc {
+      margin-bottom: 15px;
+    }
+    .tours {
+      margin-bottom: 60px;
+    }
+    .tour-pic, .tour-info {
+      grid-column: span 2;
+    }
+    .tour-pic {
+      margin-bottom: 16px;
+    }
+    .top-card {
+      grid-column: span 6;
+    }
+    .top-card-stats {
+      max-width: 386px;
+    }
+    .top-card-desc {
+      margin-bottom: 15px;
+    }
+    .top {
+      margin-bottom: 60px;
+    }
+    .footer-logo {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .footer-menu {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .header-nav {
+      padding:75px 30px;
+    }
+  }
